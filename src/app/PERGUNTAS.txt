@@ -1,0 +1,9 @@
+PREGUNTAS
+
+- En "driver List" creo un nuevo routing o lo pongo en "Layout routing"?
+- En "Layout routing module" quiero que el path hijo '' cargue el componente HOME
+- Como "inyecto" el componente "Video List" en la pagina de "Home", "Team", "Profile" y "Champ"?
+- Tengo que hacer algún MODELO o TIPO para comprobar que los datos son correctos?
+
+- Cuando hago click en un Driver desde "Driver List" hay que actualizar la URL
+- Si entro a notes/angular la página no carga. Que puedo hacer?
