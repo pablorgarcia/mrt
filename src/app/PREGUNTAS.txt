@@ -5,5 +5,8 @@ PREGUNTAS
 - Como "inyecto" el componente "Video List" en la pagina de "Home", "Team", "Profile" y "Champ"?
 - Tengo que hacer algún MODELO o TIPO para comprobar que los datos son correctos?
 
-- Cuando hago click en un Driver desde "Driver List" hay que actualizar la URL
+- Cuando hago click en un Driver desde "Driver List" hay que actualizar la URL y después se carga el contenido en Profile
 - Si entro a notes/angular la página no carga. Que puedo hacer?
+- En el Profile vuelvo a llamar a drivers services, o le paso los datos específicos desde el Driver List?
+
+- Carpeta Shared en MyApp. Para que?

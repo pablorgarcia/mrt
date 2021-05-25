@@ -6,7 +6,7 @@
 <div *ngIf="datas" class="driver-list-card">
 
   <a *ngFor="let driver of datas"
-    routerLink="['/team', driver.urlProfile]">
+    routerLink="team/{{driver.urlProfile}}">
     {{ driver.alias }}
     <img
       src="{{ driver.profileImg }}"
