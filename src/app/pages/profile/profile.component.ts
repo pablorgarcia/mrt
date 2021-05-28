@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProfileComponent implements OnInit {
 
   driver: any = {};
+  currentDriver: string = '';
 
   constructor() {}
 

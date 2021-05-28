@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UrlService } from '../../../services/Url.service';
 import { DriversService } from '../../../services/drivers.service';
 
 @Component({
@@ -8,13 +9,19 @@ import { DriversService } from '../../../services/drivers.service';
 })
 export class DriversListComponent implements OnInit {
 
-  datas: any = [];
+  data: any = [];
+  currentUrl: string = '';
 
   constructor() {}
 
   ngOnInit(): void {
-    this.datas = DriversService.getDrivers();
-    console.log('datas', this.datas)
+    // Cogemos los datos de los pilotos con el Servicio y los guardamos en la Clase
+    this.data = DriversService.getDrivers();
+    console.log('DRIVER LIST - datas', this.data)
+
+    this.currentUrl = UrlService.getCurrentUrl();
+    console.log('Servicio URL desde DRIVER LIST', this.currentUrl)
+
   }
 
 }

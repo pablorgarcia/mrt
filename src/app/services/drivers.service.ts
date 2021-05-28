@@ -9,6 +9,7 @@ export class DriversService {
   constructor() {}
 
   public static getDrivers(): any {
+    console.log('DRIVER SERVICE')
     return DRIVERS;
   }
 }
