@@ -13,7 +13,7 @@ import { DriverModel } from '../../models/driverModel';
 export class ProfileComponent implements OnInit {
 
   // PORQUE ESTAS VARIABLES NO SON CONST O LET ???
-  public currentDriver: any;
+  public currentDriver: DriverModel | undefined;
   // public selectedDriver: DriverModel | undefined;
 
   constructor(
@@ -21,19 +21,9 @@ export class ProfileComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-
-    const drivers: DriverModel = DriversService.getDrivers();
-    console.log('obj drivers', drivers)
-
-    // PORQUE NO FUNCIONA ????
-    // const a = drivers.find( drivers.urlProfile === 'PabloGarcia')
-    // console.log('ddddddddd', a)
-
+    const drivers: DriverModel[] = DriversService.getDrivers();
     this.route.params.subscribe((params: Params) => {
-      console.log('SUBSCRIPCION desde PROFILE', params)
-
-      // PORQUE NO FUNCIONA ???
-      //this.currentDriver = drivers.find( driver => { driver.urlProfile === params.id });
+      this.currentDriver = drivers.find(driver => driver.urlProfile === params.id);
     });
   }
 

@@ -1,0 +1,20 @@
+<div class="bg-test">
+  <p>drivers-list works!</p>
+
+
+
+<div *ngIf="data" class="driver-list-card">
+
+  <a *ngFor="let driver of data"
+    routerLink="team/{{driver.urlProfile}}">
+    {{ driver.alias }}
+    <img
+      src="{{ driver.profileImg }}"
+      alt="{{ driver.name }}{{ driver.lastName }}">
+  </a>
+
+</div>
+
+
+
+</div>

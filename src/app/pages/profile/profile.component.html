@@ -3,22 +3,23 @@
   <p>profile works!</p>
 
   <div class="profile" *ngIf="currentDriver">
+    <app-videos-list></app-videos-list>
 
     <div class="col-left">
-      <img class="imgProfile" src="{{ currentDriver.profileImg }}" alt="{{ currentDriver.name }} {{ currentDriver.lastName }}">
+      <img class="imgProfile" src="{{ currentDriver?.profileImg }}" alt="{{ currentDriver?.name }} {{ currentDriver?.lastName }}">
       <div class="social">
         <ul>
-          <li>{{ currentDriver.twitter }}</li>
-          <li>{{ currentDriver.youtube }}</li>
+          <li>{{ currentDriver?.twitter }}</li>
+          <li>{{ currentDriver?.youtube }}</li>
         </ul>
       </div>
       <div class="description">
-        <p>{{ currentDriver.description }}</p>
+        <p>{{ currentDriver?.description }}</p>
       </div>
     </div>
     <div class="col-right">
-      <h2>{{ currentDriver.name }} {{ currentDriver.lastName }}</h2>
-      <p>{{ currentDriver.location }}</p>
+      <h2>{{ currentDriver?.name }} {{ currentDriver?.lastName }}</h2>
+      <p>{{ currentDriver?.location }}</p>
       <div class="video-list">
 
       </div>

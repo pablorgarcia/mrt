@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LayoutComponent } from './layout.component';
-import { HomeComponent } from '../../pages/home/home.component';
-import { TeamComponent } from '../../pages/team/team.component';
-import { ChampionshipsComponent } from '../../pages/championships/championships.component';
+import { HomeComponent } from '../pages/home/home.component';
+import { TeamComponent } from '../pages/team/team.component';
+import { ChampionshipsComponent } from '../pages/championships/championships.component';
 
 // Lo cargo aquí o hago un routing para "Driver list" ??????
-import { ProfileComponent } from '../../pages/profile/profile.component';
+import { ProfileComponent } from '../pages/profile/profile.component';
 
 
 const routes: Routes = [
@@ -32,7 +32,7 @@ const routes: Routes = [
         component: ChampionshipsComponent
       }
     ]
-  }
+  } 
 ];
 
 @NgModule({
