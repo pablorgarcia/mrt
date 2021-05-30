@@ -1,18 +1,73 @@
 .profile {
-  background-color: lightgoldenrodyellow;
-
   display: flex;
-  padding-top: 5rem;
+
+  padding: 1vh 5vw;
+
+  background: url('../../../assets/images/profile/bg/bg-alexb-bmw-m8-gte.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
 
 .col-left {
-  background-color: rebeccapurple;
+  background-color: var(--bg-color-white);
+  box-shadow: 0px 3px 9px #333;
 
   max-width: 270px;
+  margin-right: 5vw;
 }
-.imgProfile {}
-.social {}
-.description {}
+.imgProfile {
+  width: 13rem;
+  height: 21rem;
+  object-fit: cover;
+}
+.social {
+  padding: .5rem 1rem 0;
+}
+.social button {
+
+  display: block;
+
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.followTwitterButton {
+  color: #fff;
+  background-color: #55acee;
+  border-color: rgba(0,0,0,0.2);
+}
+.followYoutubeButton {
+  color: #fff;
+  background-color: #FF0000;
+  border-color: rgba(255, 0, 0, 0.185);
+}
+.description {
+  padding: 0 1rem;
+}
 
 .col-right {}
 .video-list {}

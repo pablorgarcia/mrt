@@ -1,3 +1,50 @@
-.bg-test {
-  background-color: lightblue;
+
+.header {
+  padding: 1rem 0;
+
+  background-color: var(--bg-color-white);
 }
+
+.header ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  //align-content: center;
+
+  font-family: 'Asap';
+  font-style: italic;
+  font-weight: 700;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header a {
+  text-transform: uppercase;
+  color: var(--link-color);
+}
+.header a:hover {
+  color: var(--link-color-hover);
+}
+
+.header input {
+  border-radius: 25px;
+  border: .5px solid green;
+  padding: .25rem 0 .25rem .5rem;
+}
+
+/*
+.header ul li:first-child {
+  flex-grow: 0;
+}
+*/
+
+/*
+.header ul li:last-child {
+  flex-wrap: wrap
+}
+*/
+

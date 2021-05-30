@@ -1,28 +1,29 @@
-.bg-test {
-  background-color: lightyellow;
-}
-
 .driver-list-card {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
-  margin-bottom: 1em;
   text-decoration: none;
-  color: black;
 
-  background-color: lightyellow;
+  padding: 1rem 0 0.5rem;
 }
 
 .driver-list-card a {
+  background-color: var(--bg-color-white);
+
   align-self: center;
   margin: 0;
+  line-height: 0;
+  text-align: center;
+  color: var(--link-color);
 }
 .driver-list-card a:hover {
-  background-color: moccasin;
+  background-color: var(--bg-color-white-hover);
 }
 
 .driver-list-card img {
-  width: 50px;
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
 }
