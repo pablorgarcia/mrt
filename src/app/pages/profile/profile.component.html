@@ -2,24 +2,28 @@
 
   <p>profile works!</p>
 
-  <div class="col-left">
-    <img class="imgProfile" src="{{ driver.profileImg }}" alt="{{ driver.name }} {{ driver.lastName }}">
-    <div class="social">
-      <ul>
-        <li>{{ driver.twitter }}</li>
-        <li>{{ driver.youtube }}</li>
-      </ul>
-    </div>
-    <div class="description">
-      <p>{{ driver.description }}</p>
-    </div>
-  </div>
-  <div class="col-right">
-    <h2>{{ driver.name }} {{ driver.lastName }}</h2>
-    <p>{{ driver.location }}</p>
-    <div class="video-list">
+  <div class="profile" *ngIf="currentDriver">
 
+    <div class="col-left">
+      <img class="imgProfile" src="{{ currentDriver.profileImg }}" alt="{{ currentDriver.name }} {{ currentDriver.lastName }}">
+      <div class="social">
+        <ul>
+          <li>{{ currentDriver.twitter }}</li>
+          <li>{{ currentDriver.youtube }}</li>
+        </ul>
+      </div>
+      <div class="description">
+        <p>{{ currentDriver.description }}</p>
+      </div>
     </div>
+    <div class="col-right">
+      <h2>{{ currentDriver.name }} {{ currentDriver.lastName }}</h2>
+      <p>{{ currentDriver.location }}</p>
+      <div class="video-list">
+
+      </div>
+    </div>
+
   </div>
 
 </main>

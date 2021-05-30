@@ -1,12 +1,14 @@
 PREGUNTAS
 
-- En "driver List" creo un nuevo routing o lo pongo en "Layout routing"?
-- En "Layout routing module" quiero que el path hijo '' cargue el componente HOME
-- Como "inyecto" el componente "Video List" en la pagina de "Home", "Team", "Profile" y "Champ"?
-- Tengo que hacer algún MODELO o TIPO para comprobar que los datos son correctos?
+- En "driver List" creo un nuevo routing o lo pongo en "Layout routing" ???
+- En "Layout routing" quiero que el path '' cargue el componente HOME, está cargando el LAYOUT
+- Como "inyecto" el componente "Video List" en la pagina de "Home", "Team", "Profile" y "Champ" ???
+    - Quitándolo del módulo de LAYOUT y poniéndolo en el módulo PAGES, no?
+- Tengo que hacer algún MODELO o TIPO para comprobar que los datos son correctos ???
 
 - Cuando hago click en un Driver desde "Driver List" hay que actualizar la URL y después se carga el contenido en Profile
-- Si entro a notes/angular la página no carga. Que puedo hacer?
-- En el Profile vuelvo a llamar a drivers services, o le paso los datos específicos desde el Driver List?
+- Si entro a notes/angular la página no carga. Que puedo hacer ???
+- En el Profile vuelvo a llamar a drivers services, o le paso los datos específicos desde el Driver List ???
 
 - Carpeta Shared en MyApp. Para que?
+- las variables "public" ??? no en el constructor, sino como "variable"
