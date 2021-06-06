@@ -1,11 +1,10 @@
-
-.header {
+nav {
   padding: 1rem 0;
 
   background-color: var(--bg-color-white);
 }
 
-.header ul {
+nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -22,29 +21,16 @@
   list-style: none;
 }
 
-.header a {
+nav a {
   text-transform: uppercase;
   color: var(--link-color);
 }
-.header a:hover {
+nav a:hover {
   color: var(--link-color-hover);
 }
 
-.header input {
+nav input {
   border-radius: 25px;
   border: .5px solid green;
   padding: .25rem 0 .25rem .5rem;
 }
-
-/*
-.header ul li:first-child {
-  flex-grow: 0;
-}
-*/
-
-/*
-.header ul li:last-child {
-  flex-wrap: wrap
-}
-*/
-

@@ -1,11 +1,19 @@
 <div class="layout">
 
-  <app-header></app-header>
+  <header>
+    <app-header></app-header>
+  </header>
 
-  <app-drivers-list></app-drivers-list>
+  <div class="driver-list">
+    <app-drivers-list></app-drivers-list>
+  </div>
 
-  <router-outlet></router-outlet>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 
-  <app-footer></app-footer>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 
 </div>
