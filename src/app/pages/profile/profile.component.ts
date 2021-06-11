@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Subscription } from 'rxjs';
 
 import { DriversService } from '../../services/drivers.service';
 import { DriverModel } from '../../models/driverModel';
@@ -16,9 +15,7 @@ export class ProfileComponent implements OnInit {
   public currentDriver: DriverModel | undefined;
   // public selectedDriver: DriverModel | undefined;
 
-  constructor(
-    private route: ActivatedRoute,
-    ) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     const drivers: DriverModel[] = DriversService.getDrivers();

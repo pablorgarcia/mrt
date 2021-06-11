@@ -1,4 +1,13 @@
 PREGUNTAS
 
+- Necesito exportar la variable YOUTUBE_CONF para usarla en el servicio VIDEOS ?
+
+==== ¿
+Failed to compile.
+layout/drivers-list/drivers-list.component.ts:31:30 - error TS2339: Property 'getVideos' does not exist on type 'typeof VideoService'.
+31     this.json = VideoService.getVideos();
+                                ~~~~~~~~~
+==== ?
+
 - Si entro a notes/angular la página no carga. Que puedo hacer ???
 Mirar si es por el DNS
