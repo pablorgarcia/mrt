@@ -1,3 +1,40 @@
+
+// https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout
+// https://css-tricks.com/snippets/css/complete-guide-grid/
+// https://pro.codely.tv/library/css-grid/307888/path/step/128543799/
+
+.driver-list-card {
+  display: grid;
+  gap: 0.7rem; // padding
+  grid-template: 1rem/1rem;
+  grid-template-columns: 5rem; // ancho de la columna
+  grid-template-rows: repeat(12, 5.3rem);
+
+  text-decoration: none;
+
+  //padding: 1rem 0 0.5rem;
+}
+
+.driver-list-card a {
+  background-color: var(--bg-color-white);
+
+
+  line-height: 0;
+  text-align: center;
+  color: var(--link-color);
+}
+.driver-list-card a:hover {
+  background-color: var(--bg-color-white-hover);
+}
+
+.driver-list-card img {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+}
+
+
+/*
 .driver-list-card {
   display: flex;
   flex-direction: row;
@@ -27,3 +64,5 @@
   height: 50px;
   object-fit: cover;
 }
+
+*/
