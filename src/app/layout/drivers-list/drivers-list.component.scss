@@ -1,18 +1,13 @@
-
-// https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout
-// https://css-tricks.com/snippets/css/complete-guide-grid/
-// https://pro.codely.tv/library/css-grid/307888/path/step/128543799/
-
 .driver-list-card {
   display: grid;
-  gap: 0.7rem; // padding
-  grid-template: 1rem/1rem;
-  grid-template-columns: 5rem; // ancho de la columna
-  grid-template-rows: repeat(12, 5.3rem);
+  gap: 0.5vh 0.5vw; // row column padding
+  /*row-gap: 0.5vh; // row padding */
+  /*column-gap: 0.5vw; // column padding */
+  grid-template-columns: repeat(6, auto); // ancho de la columna
+  grid-template-rows: auto;
+  justify-content: space-between;
 
   text-decoration: none;
-
-  //padding: 1rem 0 0.5rem;
 }
 
 .driver-list-card a {
@@ -33,8 +28,21 @@
   object-fit: cover;
 }
 
+@media screen and (min-width: 1325px) {
+
+  .driver-list-card {
+    gap: 0 0.5vw; // row column padding
+    /*row-gap: 1vh;// row padding */
+    /*column-gap: 0.5vw; // column padding */
+    grid-template-columns: repeat(12, auto); // ancho de la columna
+    grid-template-rows: auto;
+  }
+
+}
 
 /*
+// VERSION CON DISPLAY FLEX
+
 .driver-list-card {
   display: flex;
   flex-direction: row;

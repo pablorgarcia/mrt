@@ -10,25 +10,45 @@ import { YOUTUBE_CONF } from '../../config';
 })
 export class VideoService {
 
+  public youtubeURLbase2: string = 'https://www.googleapis.com/youtube/v3/'
+
   constructor(private http: HttpClient) {
     console.log('constructor VIDEO SERVICE')
   }
 
-  private static urlGetVideos(): string {
-    console.log('urlGetVideos() VIDEOS SERVICE')
+  // https://developers.google.com/youtube/v3
+  // https://developers.google.com/youtube/v3/docs/search/list?hl=es#javascript
+
+
+  private static urlLastVideos(): string {
+    console.log('urlLastVideos() VIDEOS SERVICE')
+    //PORQUÉ 'public youtubeURLbase2' está fuera del scope de esta funcion ???
+    //const youtubeURLbase: string = 'https://www.googleapis.com/youtube/v3/'
+    //return `${youtubeURLbase}search?key=${YOUTUBE_CONF.API_KEY}&channelId=${YOUTUBE_CONF.CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`;
     return `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_CONF.API_KEY}&channelId=${YOUTUBE_CONF.CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`;
   }
 
-  public getVideos(): Observable<any> {
-    console.log('getVideos() VIDEOS SERVICE')
-    return this.http.get(VideoService.urlGetVideos());
+  private static urlYoutubeList(): string {
+    console.log('urlYoutubeList() VIDEOS SERVICE')
+    // QUÉ LISTAS SALEN AQUÍ ???
+    return `https://www.googleapis.com/youtube/v3/playlists?key=${YOUTUBE_CONF.API_KEY}&channelId=${YOUTUBE_CONF.CHANNEL_ID}`;
   }
 
+
+  public getLastVideos(): Observable<any> {
+    console.log('getVideos() VIDEOS SERVICE')
+    return this.http.get(VideoService.urlLastVideos());
+  }
+
+  public getYoutubeList(): Observable<any> {
+    console.log('getYoutubeList() VIDEOS SERVICE')
+    return this.http.get(VideoService.urlYoutubeList());
+  }
 
 }
 
 
-/* RESULTADO DE LA LLAMADA DE LA API
+/* RESULTADO DE LA LLAMADA DE LA API LAST VIDEOS
 
 {
   kind: "youtube#searchListResponse",
