@@ -7,13 +7,15 @@ import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DriversListComponent } from './drivers-list/drivers-list.component';
+import { VideoListComponent } from './video-list/video-list.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     HeaderComponent,
     DriversListComponent,
-    FooterComponent
+    FooterComponent,
+    VideoListComponent
   ],
   exports: [
     LayoutComponent

@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { DriversService } from '../../services/drivers.service';
 
-// PROBANDO
-import { VideoService } from '../../services/video.service'
 
 @Component({
   selector: 'app-drivers-list',
@@ -12,20 +10,14 @@ import { VideoService } from '../../services/video.service'
 })
 export class DriversListComponent implements OnInit {
 
-  data: any = [];
-
-  // PROBANDO
-  json: any = [];
+  driversData: any = [];
 
   constructor() {}
 
   ngOnInit(): void {
     // Cogemos los datos de los pilotos con el Servicio y los guardamos en la Clase
-    this.data = DriversService.getDrivers();
-    console.log('DRIVER LIST all data', this.data)
-
-    // PROBANDO
-    //this.json = VideoService.getVideos();
+    this.driversData = DriversService.getDrivers();
+    console.log('DRIVER LIST all data', this.driversData)
   }
 
 }
