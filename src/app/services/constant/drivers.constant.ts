@@ -1,6 +1,7 @@
 const DRIVERS = [
   {
     profileImg: '../../../assets/images/profile/jose-pintado.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Jose',
     lastName: 'Pintado',
     urlProfile: 'JosePintado',
@@ -22,6 +23,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/yayo.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Javi',
     lastName: 'Ortega',
     urlProfile: 'JaviOrtega',
@@ -47,11 +49,12 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/pablo-garcia.png',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Pablo',
     lastName: 'Garcia',
     urlProfile: 'PabloGarcia',
     alias: 'Pablo',
-    description: 'description pablo',
+    description: 'He empezado en el mundo del karting en septiembre de 2017. Estoy subiendo estos vídeos para analizar y corregir mis errores. Si hemos corrido juntos será un placer escuchar tu feedback :)',
     location: 'Madrid, C. Madrid',
     twitter: '@pablo',
     youtube: '@zxcvb',
@@ -82,6 +85,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/mario-lobato.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Mario',
     lastName: 'Lobato',
     urlProfile: 'MarioLobato',
@@ -103,6 +107,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/alejandro-barasoain.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Alex',
     lastName: 'Barasoain',
     urlProfile: 'AlexBarasoain',
@@ -124,6 +129,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/alex-diaz.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Alex',
     lastName: 'Diaz',
     urlProfile: 'AlexDiaz',
@@ -145,6 +151,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/alvaro-barco.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Álvaro',
     lastName: 'Barco',
     urlProfile: 'AlvaroBarco',
@@ -166,6 +173,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/borja-luna.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Borja',
     lastName: 'Luna',
     urlProfile: 'BorjaLuna',
@@ -187,6 +195,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/maik.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'MiguelAngel',
     lastName: 'Gutierrez',
     urlProfile: 'MiguelAngelGutierrez',
@@ -208,6 +217,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/rafa-muniz.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Rafa',
     lastName: 'Muñiz',
     urlProfile: 'RafaMuniz',
@@ -229,6 +239,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/ruben-escribano.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Ruben',
     lastName: 'Escribano',
     urlProfile: 'RubenEscribano',
@@ -250,6 +261,7 @@ const DRIVERS = [
   },
   {
     profileImg: '../../../assets/images/profile/sergio-platas.jpg',
+    backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
     name: 'Sergio',
     lastName: 'Platas',
     urlProfile: 'SergioPlatas',

@@ -23,9 +23,14 @@
 }
 
 .driver-list-card img {
-  width: 80px;
-  height: 50px;
+  /* formato 16:9*/
+  width: 192px;
+  height: 108px;
   object-fit: cover;
+}
+
+.driver-list-card a.active-link {
+  color: orange;
 }
 
 @media screen and (min-width: 1325px) {
@@ -36,6 +41,12 @@
     /*column-gap: 0.5vw; // column padding */
     grid-template-columns: repeat(12, auto); // ancho de la columna
     grid-template-rows: auto;
+  }
+
+  .driver-list-card img {
+    /* formato 4:3*/
+    width: 102.4px;
+    height: 76.8px;
   }
 
 }

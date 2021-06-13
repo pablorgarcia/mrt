@@ -1,7 +1,8 @@
 <div class="driver-list-card" *ngIf="driversData">
 
   <a *ngFor="let driver of driversData"
-    routerLink="team/{{driver.urlProfile}}">
+    routerLink="team/{{driver.urlProfile}}"
+    routerLinkActive="active-link">
     <img
       src="{{ driver.profileImg }}"
       alt="{{ driver.name }}{{ driver.lastName }}">

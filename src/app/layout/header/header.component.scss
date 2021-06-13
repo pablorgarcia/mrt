@@ -1,8 +1,54 @@
 nav {
-  padding: 1rem 0;
+  padding: 1rem 5vw;
 
   background-color: var(--bg-color-white);
+  border-bottom: 1px solid #dadce0;
+  
 }
+
+nav ul {
+  display: grid;
+  gap: 0.5vh 0.5vw; // row column padding
+
+  grid-template-columns: 4, auto; // ancho de la columna
+  grid-template-rows: auto;
+  justify-content: start;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: var(--link-color);
+}
+nav a:hover {
+  color: var(--link-color-hover);
+}
+
+nav input {
+  border-radius: 25px;
+  border: .5px solid purple;
+  padding: .25rem 0 .25rem .5rem;
+}
+
+nav a.active-link {
+  color: orange;
+}
+
+@media screen and (min-width: 1325px) {
+  nav ul {
+
+  gap: 0.5vh 0.5vw; // row column padding
+
+  grid-template-columns: repeat(4, auto); // ancho de la columna
+  justify-content: space-evenly;
+  }
+
+}
+
+/*
+// VERSION CON DISPLAY FLEX
 
 nav ul {
   display: flex;
@@ -34,3 +80,5 @@ nav input {
   border: .5px solid green;
   padding: .25rem 0 .25rem .5rem;
 }
+
+*/

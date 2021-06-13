@@ -1,5 +1,6 @@
 export class DriverModel {
   public profileImg: string;
+  public backImg: string;
   public name: string;
   public lastName: string;
   public urlProfile: string;
@@ -16,6 +17,7 @@ export class DriverModel {
 
   constructor(
     profileImg: string,
+    backImg: string,
     name: string,
     lastName: string,
     urlProfile: string,
@@ -31,6 +33,7 @@ export class DriverModel {
     photos: object
     ) {
       this.profileImg = profileImg;
+      this.backImg = backImg;
       this.name = name;
       this.lastName = lastName;
       this.urlProfile = urlProfile;

@@ -1,7 +1,7 @@
 .profile {
   display: flex;
 
-  background: url('../../../assets/images/profile/bg/bg-alexb-bmw-m8-gte.png') no-repeat center center fixed;
+//  background: url('../../../assets/images/profile/bg/bg-alexb-bmw-m8-gte.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -68,4 +68,7 @@
 }
 
 .col-right {}
+.col-right h2 {
+  font-weight: 700;
+}
 .video-list {}
