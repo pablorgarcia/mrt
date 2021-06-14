@@ -6,18 +6,17 @@
       <button class="followTwitterButton">Follow {{ currentDriver?.twitter }}</button>
       <button class="followYoutubeButton">Follow {{ currentDriver?.youtube }}</button>
     </div>
-    <div class="description">
-      <p>{{ currentDriver?.description }}</p>
-    </div>
+    <!--div class="description"></div-->
   </div>
   <div class="col-right">
     <h1>{{ currentDriver?.name }} {{ currentDriver?.lastName }}</h1>
-    <p>{{ currentDriver?.location }}</p>
+    <p class="location">{{ currentDriver?.location }}</p>
+    <p class="description">{{ currentDriver?.description }}</p>
     <div class="video-list">
       <app-videos-list></app-videos-list>
     </div>
+    <p>MONTAR EL PROFILE CON DISPLAY GRID</p>
   </div>
 
-  <p>MONTAR EL PROFILE CON DISPLAY GRID</p>
 
 </div>
