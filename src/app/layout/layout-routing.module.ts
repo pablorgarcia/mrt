@@ -13,10 +13,15 @@ import { ProfileComponent } from '../pages/profile/profile.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: '',
+        path: 'home',
         component: HomeComponent
       },
       {
@@ -32,7 +37,7 @@ const routes: Routes = [
         component: ChampionshipsComponent
       }
     ]
-  } 
+  }
 ];
 
 @NgModule({

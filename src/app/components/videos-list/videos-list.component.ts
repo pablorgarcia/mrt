@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 // PROBANDO
 import { VideoService } from '../../services/video.service';
-//import { VideoModel } from '../../models/VideoModel';
+import { VideoModel } from '../../models/VideoModel';
 
 @Component({
   selector: 'app-videos-list',
@@ -12,15 +12,16 @@ import { VideoService } from '../../services/video.service';
 export class VideosListComponent implements OnInit {
 
   // PROBANDO
-  //public videoDataX: VideoModel | undefined;
+  public videoData: VideoModel | undefined;
 
-  constructor() {}
+  constructor(private videoService: VideoService) {}
 
   ngOnInit(): void {
-    // PROBANDO - PORQUÉ NO FUNCIONA, SI ESTÁ IGUAL QUE 'this.driversData'
-    //this.videoDataX = VideoService.getLastVideos();
+    this.videoService.getLastVideos().subscribe((res: VideoModel) => {
+      console.log(res)
+      this.videoData = res;
+    });
     //const videoData: VideoModel[] = VideoService.getLastVideos();
-    //console.log('1111', videoDataX)
   }
 
 }
