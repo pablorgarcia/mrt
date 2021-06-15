@@ -3,14 +3,14 @@ nav {
 
   background-color: var(--bg-color-white);
   border-bottom: 1px solid #dadce0;
-  
+
 }
 
 nav ul {
   display: grid;
   gap: 0.5vh 0.5vw; // row column padding
 
-  grid-template-columns: 4, auto; // ancho de la columna
+  grid-template-columns: 6, auto; // ancho de la columna
   grid-template-rows: auto;
   justify-content: start;
 

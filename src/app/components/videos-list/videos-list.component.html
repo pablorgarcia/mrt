@@ -1,4 +1,67 @@
 <div class="video-list">
-  <p>videos-list works!</p>
+
+  <p>Video list</p>
+
+  <div *ngIf="lastVideos && lastVideoData">
+    <h2>Last videos</h2>
+    <p>{{ lastVideoData?.items[0].snippet.description }}</p>
+
+    <img src="{{ lastVideoData?.items[0].snippet.thumbnails.high.url }}" width="{{ lastVideoData?.items[0].snippet.thumbnails.medium.width }}" height="{{ lastVideoData?.items[0].snippet.thumbnails.medium.height }}" alt="">
+  </div>
+
+  <div *ngIf="hotLapVideos">
+    <h2>HOTLAP</h2>
+  </div>
+
+
 </div>
- 
+
+<!-- RESULTADO DE LA LLAMADA DE LA API
+{
+  kind: "youtube#searchListResponse",
+    etag: "ygVeVuJt6a7fCdwuWWPrLfTF4I4",
+      nextPageToken: "CAUQAA",
+        regionCode: "ES",
+          pageInfo: {
+    totalResults: 101,
+      resultsPerPage: 5
+  },
+  items: [
+    {
+      kind: "youtube#searchResult",
+      etag: "DQrIq_1i2ggRpditk56sJ8OxGzU",
+      id: {
+        kind: "youtube#video",
+        videoId: "t61C56vTAnY"
+      },
+      snippet: {
+        publishedAt: "2021-06-06T07:00:12Z",
+        channelId: "UCAnEUW12DYwZ8kgET9HXDKw",
+        title: "Hot lap Pinto Karting 56,591",
+        description: "Karting Pinto, Madrid [17/04/21] [Hot lap] [onboard] [Pinto Karting] Hotlap: 56591 Intro: 0:00 Hotlap: 0:18 Ending: 01:19 Pablo García, racing driver of MRT ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/t61C56vTAnY/default.jpg",
+            width: 120,
+            height: 90
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/t61C56vTAnY/mqdefault.jpg",
+            width: 320,
+            height: 180
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/t61C56vTAnY/hqdefault.jpg",
+            width: 480,
+            height: 360
+          }
+        },
+        channelTitle: "Pablo García",
+        liveBroadcastContent: "none",
+        publishTime: "2021-06-06T07:00:12Z"
+      }
+    }
+  ]
+}
+
+-->
