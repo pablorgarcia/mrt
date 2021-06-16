@@ -6,12 +6,6 @@ import { DRIVERS } from './constant/drivers.constant';
 })
 export class DriversService {
 
-  constructor() {
-    console.log('constructor DRIVER SERVICE')
-  }
+  public static getDrivers(): any { return DRIVERS; }
 
-  public static getDrivers(): any {
-    console.log('getDrivers() DRIVER SERVICE')
-    return DRIVERS;
-  }
 }

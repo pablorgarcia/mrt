@@ -6,10 +6,6 @@ import { SPONSORS } from './constant/sponsors.constant';
 })
 export class SponsorsService {
 
-  constructor() {}
+  public static getSponsors(): any { return SPONSORS; }
 
-  public static getSponsors(): any {
-    console.log('SPONSORS SERVICE')
-    return SPONSORS;
-  }
 }

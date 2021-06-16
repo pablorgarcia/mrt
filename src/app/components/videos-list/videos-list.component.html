@@ -1,18 +1,20 @@
 <div class="video-list">
 
-  <p>Video list</p>
+  <p>New video list</p>
 
   <div *ngIf="lastVideos && lastVideoData">
     <h2>Last videos</h2>
-    <p>{{ lastVideoData?.items[0].snippet.description }}</p>
 
-    <img src="{{ lastVideoData?.items[0].snippet.thumbnails.high.url }}" width="{{ lastVideoData?.items[0].snippet.thumbnails.medium.width }}" height="{{ lastVideoData?.items[0].snippet.thumbnails.medium.height }}" alt="">
+    <div *ngFor="let item of lastVideoData" class="carousel">
+      <img src="{{ item.snippet.thumbnails.high.url }}" width="{{ item.snippet.thumbnails.medium.width }}" height="{{ item.snippet.thumbnails.medium.height }}" alt="">
+      <p>{{ item.snippet.description }}</p>
+    </div>
+
   </div>
 
   <div *ngIf="hotLapVideos">
     <h2>HOTLAP</h2>
   </div>
-
 
 </div>
 

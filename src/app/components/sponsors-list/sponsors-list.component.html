@@ -1,5 +1,4 @@
 <p>Sponsors</p>
 <ul>
-  <li><p>recambio clasico</p></li>
-  <li><p>Patio Monreal</p></li>
+  <li *ngFor="let item of sponsorsData"><p>{{ item.sponsorName }}</p></li>
 </ul>

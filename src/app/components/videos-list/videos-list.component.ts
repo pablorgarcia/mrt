@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { VideoModel } from '../../models/VideoModel';
-
 import { VideoService } from '../../services/video.service';
 
 
@@ -25,9 +23,9 @@ export class VideosListComponent implements OnInit {
     console.log('hey false? ', this.lastVideos)
 
     if (this.lastVideos) {
-      this.videoService.getLastVideos().subscribe((res: VideoModel) => {
-        console.log('getLastVideos', res)
-        this.lastVideoData = res;
+      this.videoService.getLastVideos().subscribe((res: any) => {
+        this.lastVideoData = res.items;
+        console.log('items', this.lastVideoData)
       });
     }
 
@@ -36,7 +34,5 @@ export class VideosListComponent implements OnInit {
     }
 
   }
-
-
 
 }
