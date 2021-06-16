@@ -1,37 +1,41 @@
 .profile {
   display: grid;
-  gap: 0.5vh 0.5vw; // row column padding
-  grid-template-columns: 13rem, auto; // ancho de la columna
-  //grid-template-rows: auto;
+  gap: 0; // row column padding
+  /*gap: 0.5vh 0.5vw; // row column padding */
+  grid-template-columns: 50vw 50vw; // ancho de la columna
+  grid-template-rows: auto auto;
   //justify-content: space-between;
 
-//  background: url('../../../assets/images/profile/bg/bg-alexb-bmw-m8-gte.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-}
-
-.col-left {
   background-color: var(--bg-color-white);
-  box-shadow: 0px 3px 9px #333;
-
-  // max-width: 270px;
-  //margin-right: 5vw;
 }
-.imgProfile {
-  width: 13rem;
-  height: 21rem;
-  object-fit: cover;
+
+.col-left,
+.col-right {
+  width: 40vw;
+}
+.col-left h1 {
+  margin-bottom: 24px;
+}
+.col-left h2 {
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.location {
+  font-size: 11px;
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  font-weight: 500;
+  letter-spacing: .8px;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  text-rendering: auto;
+  text-transform: uppercase;
 }
 .social {
   padding: .5rem 1rem 0;
 }
 .social button {
-
-  display: block;
-
   padding-left: 44px;
   text-align: left;
   white-space: nowrap;
@@ -68,29 +72,19 @@
   border-color: rgba(255, 0, 0, 0.185);
 }
 
-.col-right {}
-.col-right h1 {
-  margin-bottom: 24px;
+.col-right {
+  //max-width: 270px;
 }
-.col-right h2 {
-  font-weight: 700;
-  margin-bottom: 40px;
+.imgProfile {
+  width: 33vw;
+  height: 33vw;
+  /*width: 13rem;
+  height: 21rem;*/
+  object-fit: cover;
 }
-.location {
-  font-size: 11px;
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
-  font-weight: 500;
-  letter-spacing: .8px;
-  line-height: 21px;
-  margin: 0;
-  padding: 0;
-  text-rendering: auto;
-  text-transform: uppercase;
+.video-list {
+  width: 90vw;
 }
-
-.video-list {}
-
 
 
 /*

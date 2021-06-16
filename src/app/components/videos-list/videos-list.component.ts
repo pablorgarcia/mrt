@@ -17,20 +17,27 @@ export class VideosListComponent implements OnInit {
   public hotLapVideoData: any | undefined;
 
 
-  constructor(private videoService: VideoService) {}
+  constructor(private videoService: VideoService) {
+    console.log('constructor lastVideos', this.lastVideos)
+    console.log('constructor hotLapVideos', this.hotLapVideos)
+  }
 
   ngOnInit(): void {
-    console.log('hey false? ', this.lastVideos)
+
+    console.log('oninit lastVideos', this.lastVideos)
+    console.log('oninit hotLapVideos', this.hotLapVideos)
 
     if (this.lastVideos) {
+
       this.videoService.getLastVideos().subscribe((res: any) => {
         this.lastVideoData = res.items;
         console.log('items', this.lastVideoData)
       });
+
     }
 
     if (this.hotLapVideos) {
-      console.log('cargamos los videos de HOTLAPs')
+      // console.log('cargamos los videos de HOTLAPs')
     }
 
   }

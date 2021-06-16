@@ -1,14 +1,16 @@
 <div class="video-list">
 
   <p>New video list</p>
+  <app-video-player></app-video-player>
 
-  <div *ngIf="lastVideos && lastVideoData">
+  <div *ngIf="lastVideos">
     <h2>Last videos</h2>
 
     <div *ngFor="let item of lastVideoData" class="carousel">
       <img src="{{ item.snippet.thumbnails.high.url }}" width="{{ item.snippet.thumbnails.medium.width }}" height="{{ item.snippet.thumbnails.medium.height }}" alt="">
       <p>{{ item.snippet.description }}</p>
     </div>
+
 
   </div>
 

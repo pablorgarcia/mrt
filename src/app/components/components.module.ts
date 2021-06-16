@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { VideosListComponent } from './videos-list/videos-list.component';
 import { SponsorsListComponent } from './sponsors-list/sponsors-list.component';
 import { PhotosListComponent } from './photos-list/photos-list.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { PhotosListComponent } from './photos-list/photos-list.component';
     VideosListComponent,
     SponsorsListComponent,
     PhotosListComponent,
+    VideoPlayerComponent,
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,7 @@ import { PhotosListComponent } from './photos-list/photos-list.component';
     VideosListComponent,
     SponsorsListComponent,
     PhotosListComponent,
+    VideoPlayerComponent
   ]
 })
 export class ComponentsModule {}
