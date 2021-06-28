@@ -3,5 +3,23 @@
 }
 
 .carousel {
+  display: grid;
+  gap: 1vh 1vw; // 0.5vh 0.5vw; // row column padding
+  /*row-gap: 0.5vh; // row padding */
+  /*column-gap: 0.5vw; // column padding */
+  grid-template-columns: repeat(4, auto); // ancho de la columna
+  grid-template-rows: auto;
+  justify-content: space-between;
+
   background-color: lightgrey;
+}
+
+.carousel-item {
+
+}
+
+.carousel-thumbnail {
+  // width: 100%; // 323px
+  // height: 56.25%; // 181px
+  object-fit: cover;
 }

@@ -6,35 +6,34 @@ import { HomeComponent } from '../pages/home/home.component';
 import { TeamComponent } from '../pages/team/team.component';
 import { ChampionshipsComponent } from '../pages/championships/championships.component';
 
-// Lo cargo aquí o hago un routing para "Driver list" ??????
 import { ProfileComponent } from '../pages/profile/profile.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+    redirectTo: '/mancos',
+    pathMatch: 'full' // home
   },
   {
     path: '',
     component: LayoutComponent,
     children: [
       {
-        path: 'home',
-        component: HomeComponent
+        path: 'mancos',
+        component: HomeComponent // home
+      },
+      {
+        path: 'racing',
+        component: ChampionshipsComponent // championships
       },
       {
         path: 'team',
         component: TeamComponent
       },
-      { // LO DEJO AQUÍ O CREO UN DRIVER LIST ROUTING ??????
+      {
         path: 'team/:id',
         component: ProfileComponent
-      },
-      {
-        path: 'championships',
-        component: ChampionshipsComponent
       }
     ]
   }

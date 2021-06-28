@@ -18,6 +18,8 @@ export class DriversListComponent implements OnInit {
     // Cogemos los datos de los pilotos con el Servicio y los guardamos en la Clase
     this.driversData = DriversService.getDrivers();
     console.log('DRIVER LIST all data', this.driversData)
+    this.driversData = this.driversData.sort();
+    console.log('SORT', this.driversData)
   }
 
 }

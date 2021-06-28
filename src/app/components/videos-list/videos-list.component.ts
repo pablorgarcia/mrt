@@ -31,6 +31,7 @@ export class VideosListComponent implements OnInit {
 
       this.videoService.getLastVideos().subscribe((res: any) => {
         this.lastVideoData = res.items;
+        console.log('respuesta', res)
         console.log('items', this.lastVideoData)
       });
 
