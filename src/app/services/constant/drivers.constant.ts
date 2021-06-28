@@ -196,7 +196,7 @@ const DRIVERS = [
   {
     profileImg: '../../../assets/images/profile/maik.jpg',
     backImg: '../../../assets/images/images/profile/bg/bg-alexb-bmw-m8-gte.png',
-    name: 'MiguelAngel',
+    name: 'Miguel Angel',
     lastName: 'Gutierrez',
     urlProfile: 'MiguelAngelGutierrez',
     alias: 'Maik',

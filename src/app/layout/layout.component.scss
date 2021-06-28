@@ -2,6 +2,7 @@
 
 header {
   /*padding: 0 5vw;*/
+  border-bottom: 1px solid var(--border-color-bottom);
 }
 
 .driver-list {
@@ -13,4 +14,6 @@ main {}
 footer {
   background-color: var(--bg-color-white);
   padding: 2vh 5vw 5vh 5vw;
+
+  border-top: 1px solid var(--border-color-top);
 }
