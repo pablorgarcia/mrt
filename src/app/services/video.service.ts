@@ -18,13 +18,15 @@ export class VideoService {
     return `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_CONF.API_KEY}&channelId=${YOUTUBE_CONF.CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`;
   }
 
-  private static urlYoutubeList(): string {
+  private static urlYoutubeList(listName: string): string {
     // QUÉ LISTAS SALEN AQUÍ ???
-    return `https://www.googleapis.com/youtube/v3/playlists?key=${YOUTUBE_CONF.API_KEY}&channelId=${YOUTUBE_CONF.CHANNEL_ID}`;
+    return `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${listName}&key=${YOUTUBE_CONF.API_KEY}`;
   }
 
   public getLastVideos(): Observable<any> { return this.http.get(VideoService.urlLastVideos()); }
 
-  public getYoutubeList(): Observable<any> { return this.http.get(VideoService.urlYoutubeList()); }
+  public getYoutubeList(YTlist: string): Observable<any> { return this.http.get(VideoService.urlYoutubeList(YTlist)); }
+
+  //public getHotLapVideos(): Observable<any> { return this.http.get(VideoService.urlYoutubeList()); }
 
 }

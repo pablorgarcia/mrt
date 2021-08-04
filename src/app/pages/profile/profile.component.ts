@@ -11,9 +11,8 @@ import { DriverModel } from '../../models/driverModel';
 })
 export class ProfileComponent implements OnInit {
 
-  // PORQUE ESTAS VARIABLES NO SON CONST O LET ???
   public currentDriver: DriverModel | undefined;
-  // public selectedDriver: DriverModel | undefined;
+  public socialClass: boolean | undefined;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -22,6 +21,14 @@ export class ProfileComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.currentDriver = drivers.find(driver => driver.urlProfile === params.id);
     });
+    if (this.currentDriver) {
+      if (this.currentDriver.twitter && this.currentDriver.youtube) { this.socialClass = true; }
+      else { this.socialClass = false; }
+    }
+  }
+
+  goToLink(url: string): void {
+    window.open('https://' + url + '.com/' + this.currentDriver?.twitter, '_blank');
   }
 
 }

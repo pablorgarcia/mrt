@@ -1,18 +1,19 @@
 <div class="video-list">
 
   <p>New video list</p>
-  <!--app-video-player></app-video-player-->
 
   <div *ngIf="lastVideos">
     <h2>Last videos</h2>
+    <p>Descripción</p>
 
     <div class="carousel">
 
-      <div *ngFor="let item of lastVideoData" class="carousel-item">
-        <p>{{ item.snippet.description }}</p>
+      <div *ngFor="let item of lastVideoData" class="carousel-item" (click)="openVideoPlayer(item.snippet.title, item.id.videoId)">
         <!--span class="carousel-thumbnail" style="background-image: url( '{{ item.snippet.thumbnails.high.url }}' )" alt=""></span-->
         <img class="carousel-thumbnail" src="{{ item.snippet.thumbnails.high.url }}" width="100%" alt="">
         <!--img class="carousel-thumbnail" src="{{ item.snippet.thumbnails.high.url }}" width="{{ item.snippet.thumbnails.medium.width }}" height="{{ item.snippet.thumbnails.medium.height }}" alt=""-->
+        <h3>{{ item.snippet.title }}</h3>
+        <p>{{ item.snippet.description }}</p>
       </div>
 
     </div>
@@ -22,56 +23,20 @@
 
   <div *ngIf="hotLapVideos">
     <h2>HOTLAP</h2>
+    <p>Descripción</p>
+
+    <div class="carousel">
+
+      <div *ngFor="let item of lastVideoData" class="carousel-item" (click)="openVideoPlayer(item.snippet.title, item.id.videoId)">
+        <!--span class="carousel-thumbnail" style="background-image: url( '{{ item.snippet.thumbnails.high.url }}' )" alt=""></span-->
+        <img class="carousel-thumbnail" src="{{ item.snippet.thumbnails.high.url }}" width="100%" alt="">
+        <!--img class="carousel-thumbnail" src="{{ item.snippet.thumbnails.high.url }}" width="{{ item.snippet.thumbnails.medium.width }}" height="{{ item.snippet.thumbnails.medium.height }}" alt=""-->
+        <h3>{{ item.snippet.title }}</h3>
+        <p>{{ item.snippet.description }}</p>
+      </div>
+
+    </div>
+
   </div>
 
 </div>
-
-<!-- RESULTADO DE LA LLAMADA DE LA API
-{
-  kind: "youtube#searchListResponse",
-    etag: "ygVeVuJt6a7fCdwuWWPrLfTF4I4",
-      nextPageToken: "CAUQAA",
-        regionCode: "ES",
-          pageInfo: {
-    totalResults: 101,
-      resultsPerPage: 5
-  },
-  items: [
-    {
-      kind: "youtube#searchResult",
-      etag: "DQrIq_1i2ggRpditk56sJ8OxGzU",
-      id: {
-        kind: "youtube#video",
-        videoId: "t61C56vTAnY"
-      },
-      snippet: {
-        publishedAt: "2021-06-06T07:00:12Z",
-        channelId: "UCAnEUW12DYwZ8kgET9HXDKw",
-        title: "Hot lap Pinto Karting 56,591",
-        description: "Karting Pinto, Madrid [17/04/21] [Hot lap] [onboard] [Pinto Karting] Hotlap: 56591 Intro: 0:00 Hotlap: 0:18 Ending: 01:19 Pablo García, racing driver of MRT ...",
-        thumbnails: {
-          default: {
-            url: "https://i.ytimg.com/vi/t61C56vTAnY/default.jpg",
-            width: 120,
-            height: 90
-          },
-          medium: {
-            url: "https://i.ytimg.com/vi/t61C56vTAnY/mqdefault.jpg",
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: "https://i.ytimg.com/vi/t61C56vTAnY/hqdefault.jpg",
-            width: 480,
-            height: 360
-          }
-        },
-        channelTitle: "Pablo García",
-        liveBroadcastContent: "none",
-        publishTime: "2021-06-06T07:00:12Z"
-      }
-    }
-  ]
-}
-
--->

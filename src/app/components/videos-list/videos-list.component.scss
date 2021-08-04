@@ -15,7 +15,11 @@
 }
 
 .carousel-item {
+  cursor: pointer;
+}
 
+.carousel-item:hover {
+  background-color: lightgreen;
 }
 
 .carousel-thumbnail {

@@ -1,9 +1,40 @@
 .video-player {
-  width: 90vw;
-  height: 90vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.699);
+
+  z-index: 10;
+  overflow: hidden ;
+}
+
+.video-player svg {
+  position: fixed;
+  right: 2vw;
+  top: 2vh;
+
+  width: 1.8em;
+  height: 1.8em;
+
+  fill: rgba(255, 255, 255, 0.527);
+  cursor: pointer;
+}
+
+.video-player svg:hover {
+  fill: rgb(255, 255, 255);
 }
 
 .player {
-  width: 90vw;
-  height: 50.6vw;
+  position: fixed;
+  left: 16vw;
+  top: 10vh;
+
+  width: 68vw;
+  height: 80vh;
+  padding: 0;
+
+  cursor: pointer;
 }
+

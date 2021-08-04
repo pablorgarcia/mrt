@@ -6,6 +6,11 @@ import { DRIVERS } from './constant/drivers.constant';
 })
 export class DriversService {
 
-  public static getDrivers(): any { return DRIVERS; }
+  public static getDrivers(): any {
+    return DRIVERS;
+    /*return DRIVERS.sort(function (a, b){
+      return (b.lastName - a.lastName)
+    })*/
+  }
 
 }

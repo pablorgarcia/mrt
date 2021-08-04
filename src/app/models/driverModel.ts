@@ -10,7 +10,7 @@ export class DriverModel {
   public twitter: string;
   public youtube: string;
   public youtubeId: string;
-  public youtubeChannels: object;
+  public youtubeLists: object;
   public youtubeTotalVideos: number;
   public yotubeApiKey: string;
   public photos: object;
@@ -27,7 +27,7 @@ export class DriverModel {
     twitter: string,
     youtube: string,
     youtubeId: string,
-    youtubeChannels: object,
+    youtubeLists: object,
     youtubeTotalVideos: number,
     yotubeApiKey: string,
     photos: object
@@ -43,7 +43,7 @@ export class DriverModel {
       this.twitter = twitter;
       this.youtube = youtube;
       this.youtubeId = youtubeId;
-      this.youtubeChannels = youtubeChannels;
+      this.youtubeLists = youtubeLists;
       this.youtubeTotalVideos = youtubeTotalVideos;
       this.yotubeApiKey = yotubeApiKey;
       this.photos = photos;

@@ -5,10 +5,12 @@
   --bg-color-gray: #e8eaed;
   --bg-color-white-hover: #fff;
   --text-color: #202124;
-  --link-color: #5f6368; // Azul link #1a73e8
-  --link-color-hover: #202124;
+  --link-color: #5f6368; // Azul link #1a73e8, gris #5f6368
+  --link-color-hover: #174ea6;// negro #202124; gris #5f6368
+  --link-color-active: #1a73e8;// azul
   --border-color-top: #fff;
   --border-color-bottom: #dadce0;
+  --border-color-bottom-red: #ff0000;
 }
 
 * { box-sizing: border-box; }
@@ -30,14 +32,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
+  letter-spacing: -0.025em;
 }
 
 h1 {
   font-size: 64px;
   font-weight: 400;
-  letter-spacing: -.5px;
   line-height: 76px;
-
   text-align: center;
 }
 
@@ -66,8 +67,18 @@ a {
 .profile,
 .team { padding: 1vh 5vw; }
 
+.home .container,
+.team .container,
+.championship .container{
+  display: grid;
+  justify-content: center;
+
+  width: 60vw;
+  margin: 0 auto;
+}
+
 .description {
-  text-align: center;
+  text-align: left;
 }
 
 /* FONT
