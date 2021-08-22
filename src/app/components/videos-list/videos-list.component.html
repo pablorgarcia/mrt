@@ -9,11 +9,9 @@
     <div class="carousel">
 
       <div *ngFor="let item of lastVideoData" class="carousel-item" (click)="openVideoPlayer(item.snippet.title, item.id.videoId)">
-        <!--span class="carousel-thumbnail" style="background-image: url( '{{ item.snippet.thumbnails.high.url }}' )" alt=""></span-->
         <img class="carousel-thumbnail" src="{{ item.snippet.thumbnails.high.url }}" width="100%" alt="">
-        <!--img class="carousel-thumbnail" src="{{ item.snippet.thumbnails.high.url }}" width="{{ item.snippet.thumbnails.medium.width }}" height="{{ item.snippet.thumbnails.medium.height }}" alt=""-->
-        <h3>{{ item.snippet.title }}</h3>
-        <p>{{ item.snippet.description }}</p>
+        <!--h3>{{ item.snippet.title }}</h3>
+        <p>{{ item.snippet.description }}</p-->
       </div>
 
     </div>
