@@ -6,7 +6,7 @@
   </div>
 
   <p>Videos LAST, HOTLAPS, ENDURANCE</p>
-  <app-videos-list [lastVideos]=true></app-videos-list>
-  <app-videos-list [hotLapVideos]=true></app-videos-list>
+  <app-videos-list [videoList]="lastVideoData" [totalItems]="lastVideoData?.length" (loadMore)="loadLastVideos($event)"></app-videos-list>
+  <app-videos-list [videoList]="hotLapVideoData" [totalItems]="hotLapVideoData?.length" (loadMore)="loadHotLap($event)"></app-videos-list>
 
 </div>

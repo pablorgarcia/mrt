@@ -1,6 +1,4 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { VideoModel } from '../../models/VideoModel';
-import { VideoService } from '../../services/video.service';
+import { Component, OnInit, Input, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { PlayerService } from '../../services/player.service';
 import { Subscription } from 'rxjs';
 
@@ -12,8 +10,10 @@ import { Subscription } from 'rxjs';
 })
 export class VideosListComponent implements OnInit, OnDestroy {
 
-  @Input() public lastVideos: boolean = false;
-  @Input() public hotLapVideos: boolean = false;
+  @Input() public videoList: any[] = [];
+  @Input() public totalItems: number | undefined = 0;
+
+  @Output() public loadMore = new EventEmitter<boolean>();
 
   public lastVideoData: any | undefined;
   public hotLapVideoData: any | undefined;
@@ -21,42 +21,15 @@ export class VideosListComponent implements OnInit, OnDestroy {
   public lastVideoData$: Subscription;
   public hotLapVideoData$: Subscription;
 
+  private counter = 0;
 
   constructor(
-    private videoService: VideoService,
     private playerService: PlayerService) {
       this.lastVideoData$ = new Subscription();
       this.hotLapVideoData$ = new Subscription();
     }
 
-  ngOnInit(): void {
-
-    // COGEMOS los ULTIMOS videos
-    if (this.lastVideos) {
-      this.lastVideoData$ = this.videoService.getLastVideos().subscribe(
-        (res: any) => {
-          this.lastVideoData = res.items;
-        },
-        (error: any) => {
-          this.lastVideos = false;
-          console.log('ERROR AL TRAER LOS ÚLTIMOS VIDEOS DESDE YOUTUBE', error);
-        });
-    }
-
-    // COGEMOS los videos HOTLAPs
-    if (this.hotLapVideos) {
-      this.hotLapVideoData$ = this.videoService.getYoutubeList('PLT7gUpmYiCl6xh4RRHjZGezE_O4SxX8B7').subscribe(
-        (res: any) => {
-          this.hotLapVideoData = res.items;
-          console.log('VIDEO LIST?????', this.hotLapVideoData)
-        },
-        (error: any) => {
-          this.hotLapVideos = false;
-          console.log('ERROR AL TRAER LOS VIDEOS HOTLAPS DESDE YOUTUBE', error);
-        });
-    }
-
-  }
+  ngOnInit(): void { }
 
   openVideoPlayer(title: string, src: string) {
     this.playerService.setPlayerState(true);
@@ -68,6 +41,13 @@ export class VideosListComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.lastVideoData$.unsubscribe();
     this.hotLapVideoData$.unsubscribe();
+  }
+
+  nextImg(){
+    this.counter++;
+    if((this.totalItems || 0) < this.counter) {
+      this.loadMore.emit(true);
+    }
   }
 
 }
