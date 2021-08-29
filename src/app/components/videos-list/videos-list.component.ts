@@ -2,7 +2,6 @@ import { Component, OnInit, Input, OnDestroy, Output, EventEmitter } from '@angu
 import { PlayerService } from '../../services/player.service';
 import { Subscription } from 'rxjs';
 
-
 @Component({
   selector: 'app-videos-list',
   templateUrl: './videos-list.component.html',

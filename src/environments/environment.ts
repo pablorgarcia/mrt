@@ -7,6 +7,14 @@ export const environment = {
   YOUTUBE_CONF: {
     API_KEY: 'AIzaSyCtOuqZmdD0GNfNuVSXCH5r4KWET93CCME',
     CHANNEL_ID: 'UCAnEUW12DYwZ8kgET9HXDKw',
+    videoList: {
+      hotLapId: 'PLT7gUpmYiCl6xh4RRHjZGezE_O4SxX8B7',
+      museoAlonsoId: 'PLT7gUpmYiCl6Y79oI1A4mli-F--vZ4s_i',
+      trackDayId: 'PLT7gUpmYiCl48cKEqcvc3blt4zcFpLVri',
+      pintoId: 'PLT7gUpmYiCl6dcYbZHjNgm7k4XYKeak30',
+      swsId: 'PLT7gUpmYiCl7QzL3IMzf0cOcyA1JBcu3V'
+    }
+
 
   }
 };

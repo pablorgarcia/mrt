@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.loadLastVideos(false);
-    this.loadHotLap(false);
+    this.loadLastVideos();
+    this.loadHotLap();
   }
 
-  public loadLastVideos(load: boolean) {
+  public loadLastVideos(load?: boolean) {
     this.videoService.getLastVideos().subscribe(
       (res: any) => {
         if(load) {
@@ -34,13 +34,14 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  public loadHotLap(load: boolean) {
-    this.videoService.getYoutubeList('PLT7gUpmYiCl6xh4RRHjZGezE_O4SxX8B7').subscribe(
+  public loadHotLap(load?: boolean) {
+    this.videoService.getYoutubeList().subscribe(
       (res: any) => {
+        console.log(res);
         if(load) {
-          this.hotLapVideoData = [...this.hotLapVideoData, ...res.items];
+          this.hotLapVideoData = [...this.hotLapVideoData, ...res.hotLapId];
         } else {
-          this.hotLapVideoData = res.items;
+          this.hotLapVideoData = res.hotLapId;
         }
       },
       (error: any) => {
