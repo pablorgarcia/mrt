@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { YOUTUBE_CONF } from '../../config';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -14,12 +14,12 @@ export class VideoService {
   constructor(private http: HttpClient) {}
 
   private static urlLastVideos(): string {
-    return `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_CONF.API_KEY}&channelId=${YOUTUBE_CONF.CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`;
+    return `https://www.googleapis.com/youtube/v3/search?key=${environment.YOUTUBE_CONF.API_KEY}&channelId=${environment.YOUTUBE_CONF.CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`;
   }
 
   private static urlYoutubeList(listName: string): string {
     // QUÉ LISTAS SALEN AQUÍ ???
-    return `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${listName}&key=${YOUTUBE_CONF.API_KEY}`;
+    return `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${listName}&key=${environment.YOUTUBE_CONF.API_KEY}`;
   }
 
   public getLastVideos(): Observable<any> {
